@@ -1,0 +1,68 @@
+{
+  "questions": [{
+    "id": 1,
+    "question": "1、程序员A：借我1000元吧。\n程序员B：给你凑个整数。\n程序员B借给程序员A多少钱？",
+    "options": ["A. 1000元","B. 1024元","C. 1111元"]
+  },{
+    "id": 2,
+    "question": "2、程序员A：嘿 //是什么意思啊？\n程序员B：嘿.\n程序员A：呃 我问你//是什么意思？\n程序员B：问吧.\n程序员A：我刚才不是问了么？\n程序员B：啊？\n程序员A到底问了程序员B什么问题？",
+    "options": ["A. 嘿","B. 呃 我问你","C. //是什么意思"]
+  },{
+    "id": 3,
+    "question": "3、为什么程序员分不清万圣节和圣诞节？",
+    "options": ["A. 因为 31 OCT == 25 DEC","B. 程序员只有加班/不加班，不过节","C. 程序员没有女朋友，不过节"]
+  },{
+    "id": 4,
+    "question": "4、程序员最怕弹出的窗口是",
+    "options": [{"A": "http://mmbiz.qpic.cn/mmbiz_jpg/JfI4bJ7rK0nC8R7HLGcMwlhvgqSRJrVBzqLzuuemKdSIFbicRQMALicvEmqGkLyibX8su0ibvmo3mSI0G2gM8SaUkA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1"},{"B": "http://mmbiz.qpic.cn/mmbiz_jpg/JfI4bJ7rK0nC8R7HLGcMwlhvgqSRJrVBrqq9vYKsLccKeax3iaqx7ll5mfDyrex0D0YWwe4mHgKFUwy0SCh2LSg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1"},{"C": "http://mmbiz.qpic.cn/mmbiz_jpg/JfI4bJ7rK0nC8R7HLGcMwlhvgqSRJrVBcmh0vLkIKNAujSOdvQEOLZ9w06rZ7iay9vqic18FrvVNMk16N9icNEPpA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1"}]
+  },{
+    "id": 5,
+    "question": "5、程序员：哎，太累了日子没法过了，怎么才能换行啊？",
+    "options": ["A. 打回车","B. 不换行，日子不过了","C. 除了敲代码，都不会，换行还是敲代码啊"]
+  },{
+    "id": 6,
+    "question": "6、程序员会给自己的孩子起什么名字？",
+    "options": ["A. 依依、灵灵、依灵、灵依、依初","B. Ctrl、Alt 、Delete","C. 程序员怎么会有女朋友？"]
+  },{
+    "id": 7,
+    "question": "7、如何快速挣到一百万？",
+    "options": ["A. while","B. 买彩票","C. 当乞丐"]
+  },{
+    "id": 8,
+    "question": "8、程序员下班前给老婆打电话：老婆，晚饭我带回来吃，你说买些啥？\n老婆：买1斤包子吧，如果遇到卖西瓜的，就买一个。\n程序员买包子时，看到旁边有人在卖西瓜。那么，程序员带了什么晚饭回家？",
+    "options": ["A. 1斤包子","B. 1个包子","C. 1个西瓜"]
+  },{
+    "id": 9,
+    "question": "9、一对程序员恋人面对面坐着，他们在做什么？",
+    "options": ["A. 面向对象编程","B. 喝咖啡","C. 抱怨产品经理"]
+  },{
+    "id": 10,
+    "question": "10、老板：小程，下班前新版本一定要上线！\n小程：好的。\n第二天，老板上班，问小程：新版本怎么还没上线？\n小程怎么回答的？",
+    "options": ["A. 版本出问题了","B. 版本上线前需求又改了","C. 我还没下班呢"]
+  },{
+    "id": 11,
+    "question": "11、程序员的书房里最喜欢挂什么？",
+    "options": ["A. hello world","B. just do it","C. impossible is nothing"]
+  },{
+    "id": 12,
+    "question": "12. 程序员进阶到高级阶段必读的书籍是？",
+    "options": ["A. 《C语言程序与设计》","B. 《沉默的愤怒》","C. 《颈椎病康复指南》","D.《活着》"]
+  },{
+    "id": 13,
+    "question": "13.被黑的最多的编程语言是哪一个？",
+    "options": ["A. Java","B. JavaScript","C. Python","D.PHP"]
+  },{
+    "id": 14,
+    "question": "14、怎么杀死一个程序员？",
+    "options": ["A. 找不到 bug","B. 改三次需求","C. 加班"]
+  },{
+    "id": 15,
+    "question": "15、如果程序员的女友和老妈同时掉进水里，怎么办？",
+    "options": ["A. 先救女友","B. 先救老妈","C. 按后退键"]
+  },{
+    "id": 16,
+    "question": "16、为什么吸烟的程序员不在乎香烟盒上的那个警告？",
+    "options": ["A. 字太小","B. 程序员眼中只有程序","C. 不关心Warning，只关心Error"]
+  }],
+  "answers": ["B","C","A","A","A","A","A","B","A","C","A","C","D","B","C","C"]
+}
