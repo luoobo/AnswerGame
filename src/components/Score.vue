@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>用时:{{inter}}秒</p>
+    <p>用时:{{ inter }}秒</p>
+    <div>得分:{{ totalScore }}</div>
     <button @click="goHome">返回首页</button>
   </div>
 </template>
@@ -11,7 +12,8 @@
     name: 'score',
     computed: {
       ...mapState({
-        inter: 'interval'
+        inter: 'interval',
+        totalScore: 'totalScore'
       })
     },
     methods: {

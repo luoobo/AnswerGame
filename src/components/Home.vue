@@ -16,6 +16,14 @@
       .catch(error => {
         console.log(error.message)
       })
+
+      axios.get('http://localhost:3000/answers')
+      .then(res => {
+        this.$store.dispatch('setAnswers', res.data)
+      })
+      .catch(error => {
+        console.log(error.message)
+      })
     },
     components: {
       questionItem

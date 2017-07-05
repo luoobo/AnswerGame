@@ -14,7 +14,7 @@
   },{
     "id": 4,
     "question": "4、程序员最怕弹出的窗口是",
-    "options": [{"A": "http://mmbiz.qpic.cn/mmbiz_jpg/JfI4bJ7rK0nC8R7HLGcMwlhvgqSRJrVBzqLzuuemKdSIFbicRQMALicvEmqGkLyibX8su0ibvmo3mSI0G2gM8SaUkA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1"},{"B": "http://mmbiz.qpic.cn/mmbiz_jpg/JfI4bJ7rK0nC8R7HLGcMwlhvgqSRJrVBrqq9vYKsLccKeax3iaqx7ll5mfDyrex0D0YWwe4mHgKFUwy0SCh2LSg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1"},{"C": "http://mmbiz.qpic.cn/mmbiz_jpg/JfI4bJ7rK0nC8R7HLGcMwlhvgqSRJrVBcmh0vLkIKNAujSOdvQEOLZ9w06rZ7iay9vqic18FrvVNMk16N9icNEPpA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1"}]
+    "options": ["A. 304","B. 404","C. 504"]
   },{
     "id": 5,
     "question": "5、程序员：哎，太累了日子没法过了，怎么才能换行啊？",

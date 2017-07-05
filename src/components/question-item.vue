@@ -4,9 +4,7 @@
       <button @click="start">开始答题</button>
     </div>
     <div v-else>
-      <router-link to="score">score</router-link>
-      <p>用时:{{inter}}秒</p>
-      <h1>{{ question.question }}</h1>
+      <div>{{ question.question }}</div>
       <ul>
         <li v-for="(option, index) in question.options">
           <label><input type="radio" :value="index" v-model="ans">{{ option }}</label>
@@ -31,7 +29,8 @@
     props: ['rootCompontent'],
     computed: {
       ...mapState({
-        inter: 'interval'
+        answers: 'answers',
+        userAnswers: 'userAnswers'
       }),
       // 所有题目
       questions () {
@@ -50,13 +49,23 @@
       ...mapActions({
         go: 'start',
         nextQuestion: 'nextQuestion',
-        setUserAnswer: 'setUserAnswer'
+        setUserAnswer: 'setUserAnswer',
+        stopAnswer: 'stopAnswer',
+        setTotalScore: 'setTotalScore'
       }),
       start () {
         this.$router.push('question')
         this.go()
       },
       next () {
+        if (this.ans === '') {
+          alert('请选择答案')
+          return
+        }
+        this.setAnswer()
+        this.nextQuestion()
+      },
+      setAnswer () {
         switch (this.ans) {
           case 0:
             this.answer = 'A'
@@ -71,10 +80,26 @@
             this.answer = 'D'
         }
         this.setUserAnswer(this.answer)
-        this.nextQuestion()
+        this.ans = ''
       },
       submitAnswers () {
-        console.log('ok')
+        if (this.ans === '') {
+          alert('请选择答案')
+          return
+        }
+        this.setAnswer()
+        this.stopAnswer()
+        this.setTotalScore(this.calcTotalScore())
+        this.$router.push('/score')
+      },
+      calcTotalScore () {
+        let totalNum = 0
+        for (var i = 0; i < this.userAnswers.length; i++) {
+          if (this.userAnswers[i] === this.answers[i]) {
+            totalNum++
+          }
+        }
+        return Math.round(totalNum * 100 / this.userAnswers.length)
       }
     }
   }

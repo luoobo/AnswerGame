@@ -8,10 +8,16 @@ export default {
   setQuestions ({commit}, questions) {
     commit('SET_QUESTIONS', questions)
   },
-  setAnswers ({commit}) {
-    commit('SET_ANSWERS')
+  setAnswers ({commit}, answers) {
+    commit('SET_ANSWERS', answers)
   },
-  setUserAnswer ({commit}) {
-    commit('SET_USERANSWER')
+  setUserAnswer ({commit}, answer) {
+    commit('SET_USERANSWER', answer)
+  },
+  stopAnswer ({commit}) {
+    commit('STOP_ANSWER')
+  },
+  setTotalScore ({commit}, totalScore) {
+    commit('SET_TOTALSCORE', totalScore)
   }
 }
