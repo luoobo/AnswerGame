@@ -1,5 +1,5 @@
 const state = {
-  totalScore: 0, // 总分
+  totalScore: 97, // 总分
   timer: null, // 计时器
   interval: 0, // 用时
   questionId: 0, // 题目序号

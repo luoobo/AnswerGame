@@ -21,4 +21,7 @@ li{
 a{
   text-decoration: none;
 }
+#app{
+  padding: 10px;
+}
 </style>

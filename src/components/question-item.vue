@@ -1,17 +1,28 @@
 <template>
   <div>
     <div v-if="rootCompontent === 'home'">
-      <button @click="start">开始答题</button>
+      <p class="title">2017年程序员高考试卷</p>
+      <el-button type="primary" size="small" @click="start">开始答题</el-button>
     </div>
     <div v-else>
-      <div>{{ question.question }}</div>
-      <ul>
-        <li v-for="(option, index) in question.options">
-          <label><input type="radio" :value="index" v-model="ans">{{ option }}</label>
-        </li>
-      </ul>
-      <button v-if="questionId < questions.length - 1" @click="next">下一题</button>
-      <button v-else @click="submitAnswers">提交试卷</button>
+      <el-row :gutter="10">
+        <el-col :span="3">
+          <el-progress type="circle" :percentage="percentage"></el-progress>
+        </el-col>
+        <el-col :span="6">
+          <el-card class="box-card">
+            <div>{{ question.question }}</div>
+            <ul>
+              <li v-for="(option, index) in question.options">
+                <el-radio class="radio" v-model="ans" :label="index">{{ option }}</el-radio>
+              </li>
+            </ul>
+            <el-button class="nextQuestion" type="primary" size="small" v-if="questionId < questions.length - 1" @click="next">下一题</el-button>
+            <el-button type="primary" size="small" v-else @click="submitAnswers">提交试卷</el-button>
+          </el-card>
+          
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
@@ -43,6 +54,9 @@
       // 当前题目序号,从0开始
       questionId () {
         return this.$store.state.questionId
+      },
+      percentage () {
+        return this.$store.state.questionId * 100 / this.questions.length
       }
     },
     methods: {
@@ -59,7 +73,11 @@
       },
       next () {
         if (this.ans === '') {
-          alert('请选择答案')
+          this.$message({
+            message: '请选择答案',
+            type: 'warning',
+            duration: 1000
+          })
           return
         }
         this.setAnswer()
@@ -106,5 +124,13 @@
 </script>
 
 <style>
-  
+.title{
+  margin-bottom: 10px;
+}
+.box-card{
+  padding: 10px;
+}
+.nextQuestion{
+  float: right;
+}
 </style>
