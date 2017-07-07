@@ -22,7 +22,13 @@ export default new Router({
     {
       path: '/question',
       name: 'question',
-      component: Question
+      component: Question,
+      beforeEnter: (to, from, next) => {
+        if (!from.name) {
+          next({path: '/'})
+        }
+        next()
+      }
     }
   ]
 })

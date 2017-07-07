@@ -8,7 +8,7 @@
   import questionItem from './question-item'
   import axios from 'axios'
   export default {
-    created () {
+    mounted () {
       axios.get('http://localhost:3000/questions')
       .then(res => {
         this.$store.dispatch('setQuestions', res.data)

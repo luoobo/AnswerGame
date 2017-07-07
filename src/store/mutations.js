@@ -9,6 +9,11 @@ const SET_TOTALSCORE = 'SET_TOTALSCORE'
 export default {
   [START_ANSWER] (state) {
     state.interval = 0
+    state.questionId = 0
+    if (state.timer) {
+      clearInterval(state.timer)
+      state.timer = null
+    }
     state.timer = setInterval(() => {
       state.interval++
     }, 1000)
@@ -26,7 +31,6 @@ export default {
     state.userAnswers.push(answer)
   },
   [STOP_ANSWER] (state) {
-    debugger
     if (state.userAnswers.length === state.answers.length) {
       state.questionId = 0
       clearInterval(state.timer)
