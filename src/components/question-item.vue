@@ -18,9 +18,8 @@
               </li>
             </ul>
             <el-button class="nextQuestion" type="primary" size="small" v-if="questionId < questions.length - 1" @click="next">下一题</el-button>
-            <el-button type="primary" size="small" v-else @click="submitAnswers">提交试卷</el-button>
+            <el-button class="submitAnswers" type="primary" size="small" v-else @click="submitAnswers">提交试卷</el-button>
           </el-card>
-          
         </el-col>
       </el-row>
     </div>
@@ -130,7 +129,7 @@
 .box-card{
   padding: 10px;
 }
-.nextQuestion{
+.nextQuestion, .submitAnswers{
   float: right;
 }
 </style>

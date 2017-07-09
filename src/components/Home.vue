@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-loading.fullscreen.lock="fullscreenLoading">
     <questionItem root-compontent="home"></questionItem>
   </div>
 </template>
@@ -8,10 +8,16 @@
   import questionItem from './question-item'
   import axios from 'axios'
   export default {
+    data () {
+      return {
+        fullscreenLoading: true
+      }
+    },
     mounted () {
       axios.get('http://localhost:3000/questions')
       .then(res => {
         this.$store.dispatch('setQuestions', res.data)
+        this.fullscreenLoading = false
       })
       .catch(error => {
         console.log(error.message)
