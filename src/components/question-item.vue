@@ -5,6 +5,7 @@
       <el-button type="primary" size="small" @click="start">开始答题</el-button>
     </div>
     <div v-else>
+      <div class="test">{{ widgets}}</div>
       <el-row :gutter="10">
         <el-col :span="3">
           <el-progress type="circle" :percentage="percentage"></el-progress>
@@ -13,7 +14,7 @@
           <el-card class="box-card">
             <div>{{ question.question }}</div>
             <ul>
-              <li v-for="(option, index) in question.options">
+              <li v-for="(option, index) in question.options" :key="index">
                 <el-radio class="radio" v-model="ans" :label="index">{{ option }}</el-radio>
               </li>
             </ul>
@@ -33,14 +34,16 @@
     data () {
       return {
         ans: '',
-        answer: ''
+        answer: '',
+        ii: 0
       }
     },
     props: ['rootCompontent'],
     computed: {
       ...mapState({
         answers: 'answers',
-        userAnswers: 'userAnswers'
+        userAnswers: 'userAnswers',
+        widgets: 'widgets'
       }),
       // 所有题目
       questions () {
@@ -58,13 +61,18 @@
         return this.$store.state.questionId * 100 / this.questions.length
       }
     },
+    mounted () {
+      this.setWidget({key: 'aa', data: []})
+    },
     methods: {
       ...mapActions({
         go: 'start',
         nextQuestion: 'nextQuestion',
         setUserAnswer: 'setUserAnswer',
         stopAnswer: 'stopAnswer',
-        setTotalScore: 'setTotalScore'
+        setTotalScore: 'setTotalScore',
+        setWidget: 'setWidget',
+        setWidgetData: 'setWidgetData'
       }),
       start () {
         this.$router.push('question')
@@ -77,6 +85,8 @@
             type: 'warning',
             duration: 1000
           })
+          this.setWidgetData({key: 'aa', data: this.ii})
+          this.ii++
           return
         }
         this.setAnswer()

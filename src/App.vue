@@ -1,12 +1,15 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <!-- <test></test> -->
   </div>
 </template>
 
 <script>
+import Test from './components/test'
 export default {
-  name: 'app'
+  name: 'app',
+  components: { Test }
 }
 </script>
 
@@ -23,5 +26,8 @@ a{
 }
 #app{
   padding: 10px;
+}
+#app{
+  height: 100%;
 }
 </style>

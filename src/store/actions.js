@@ -19,5 +19,11 @@ export default {
   },
   setTotalScore ({commit}, totalScore) {
     commit('SET_TOTALSCORE', totalScore)
+  },
+  setWidget ({commit}, obj) {
+    commit('SET_WIDGET', obj)
+  },
+  setWidgetData ({commit}, obj) {
+    commit('SET_WIDGET_DATA', obj)
   }
 }

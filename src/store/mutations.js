@@ -5,6 +5,10 @@ const NEXT_QUESTION = 'NEXT_QUESTION'
 const SET_USERANSWER = 'SET_USERANSWER'
 const STOP_ANSWER = 'STOP_ANSWER'
 const SET_TOTALSCORE = 'SET_TOTALSCORE'
+const SET_WIDGET = 'SET_WIDGET'
+const SET_WIDGET_DATA = 'SET_WIDGET_DATA'
+
+import Vue from 'vue'
 
 export default {
   [START_ANSWER] (state) {
@@ -39,5 +43,11 @@ export default {
   },
   [SET_TOTALSCORE] (state, totalScore) {
     state.totalScore = totalScore
+  },
+  [SET_WIDGET] (state, obj) {
+    Vue.set(state.widgets, obj.key, obj)
+  },
+  [SET_WIDGET_DATA] (state, obj) {
+    state.widgets[obj.key].data.push(obj.data)
   }
 }

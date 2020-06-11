@@ -5,6 +5,7 @@ const state = {
   questionId: 0, // 题目序号
   questions: [], // 题目
   answers: [], // 参考答案
-  userAnswers: [] // 用户答案
+  userAnswers: [], // 用户答案,
+  widgets: {}
 }
 export default state
